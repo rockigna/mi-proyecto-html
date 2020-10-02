@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades de Ubicacion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" 
+    rel="stylesheet">
+
+    <style>
+        * {
+            /*el asterisco es el selector universal*/
+            margin: 0;
+            /*los margenes se especifican con 4 valores
+            top right bottom left
+            arriba derecha abajo izquierda
+            siempre en sentido horario*/
+            padding: 0;
+            list-style: none;
+            /*esto es para borrar el estilo de lista por defecto*/
+            font-family: sans-serif;/*como buena practica se recomienda mantener 
+            siempre una misma tipografia en toda la pagina, por lo gral si queremos
+             usar otra solo se hace en titulos, logos, botones o demas cosas especificas*/
+            
+        }
+
+        header {
+            position: relative;
+            margin: 20px auto;
+            width: 1000px;
+            height: 120px;
+        }
+        #logo{
+            position: absolute;/*la posicion absoluta nos permite ubicar una caja interna dentro de 
+            una caja principal */
+            top: 30px; /*nunca puede estar el top y el bottom al mismo tiempo*/
+            left: 30px;/*lo mismo pasa con el left y el right*/
+            width: 200px;
+            height: 66px;
+            font-family: 'Kaushan Script', cursive;
+            font-size: 50px;
+            text-align: center;/*esta propiedad alinea de manera vertical*/
+            line-height: 60px;/*esta etiqueta sirve para ubicar el renglon por asi decirlo
+                                de donde va a estar el texto
+                                esta propiedad alinea de manera horizontal*/
+        }
+        .redes{
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            background: #ccc;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 42px;
+            color: white;
+        }
+        #icono1{
+            top: 42px;
+            right: 120px;
+            background: blue;
+        }
+        #icono2{
+            top: 42px;
+            right: 71px;
+            background: blueviolet;
+        }
+        #icono3{
+            top: 42px;
+            right: 19px;
+            background: brown;
+        }
+
+
+        nav {
+            position: relative;
+            margin: auto;
+            width: 1000px;
+            height: 48px;
+        }
+        .botones{
+            float: left; /*hace flotar el listado de vertical a horizontal y lo hace de izq a der*/
+            width: 196px;
+            margin: 0 2px;
+            height: 48px;
+            background:rgba(100,0,0,255);
+            font-family: 'Kaushan Script', cursive;
+            text-align: center;
+            line-height: 48px;
+            color: white;
+        }
+
+        #top {
+            position: relative;
+            margin: 20px auto;
+            width: 1000px;
+            height: 192px;
+        }
+        #top ul{/*aca tengo que crear una caja o darle valores a la caja ul porque los li no 
+        entran en la caja top*/
+            width: 1010px;
+            height: 192px;
+        }
+        #top ul li{/*seleccion de clase por ruta*/
+        float: left;
+        width: 326px;
+        height: 192px;
+        background:#888;
+        margin-right: 10px;/*con esto se corren las cajas con un margen de 10px hacia la derecha*/
+        text-align: center;
+        }
+        #top ul li img{
+            border-radius: 100%;
+            height: 100px;
+        }
+        section {
+            position: relative;
+            margin: auto;
+            width: 1000px;
+            height: 453px;
+            background: #aaa;
+        }
+        aside#izq{/*otra dorma de llamar a una caja con css es llamar a la caja y pegado el id con numeral
+        sin espacion*/
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 453px;
+            background: #333;
+        }
+        aside#der{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 453px;
+            background: #333;
+        }
+        article{
+            position: absolute;
+            left: 200px;
+            top: 0%;
+            width: 600px;
+            height: 453px;
+        }
+
+        footer {
+            position: relative;
+            margin: 20px auto;
+            width: 1000px;
+            height: 70px;
+            background: #888;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!--FLUJO DE NODOS
+        (flujo de nodos se le llama al diagrama de la pagina)-->
+
+    <!--inicia cabecera-->
+
+    <header>
+
+        <div id="logo">WarFramE</div>
+
+        <div id="icono1" class="redes">X</div>
+        <div id="icono2" class="redes">Y</div>
+        <div id="icono3" class="redes">Z</div>
+
+    </header>
+
+    <!--cierra cabecera-->
+    <!--inicia barra de navegacion-->
+
+    <nav>
+        <ul>
+            <li class="botones">BOTON 1</li>
+            <li class="botones">BOTON 2</li>
+            <li class="botones">BOTON 3</li>
+            <li class="botones">BOTON 4</li>
+            <li class="botones">BOTON 5</li>
+        </ul>
+    </nav>
+
+    <!--cierra barra de navegacion-->
+    <!--inicia parte superior-->
+
+    <div id="top">
+        <ul>
+            <li>
+                <img src="img/war1.jpg" width="100">
+                <h1>WARFRAME</h1>
+                <p>Ninjas espaciales</p>
+            </li>
+            <li>
+                <img src="img/war2.jpg" width="100">
+                <h1>WARFRAME</h1>
+                <p>Ninjas espaciales</p>
+            </li>
+            <li>
+                <img src="img/war3.jpg" width="100">
+                <h1>WARFRAME</h1>
+                <p>Ninjas espaciales</p>
+            </li>
+        </ul>
+    </div>
+
+    <!--cierre parte superior-->
+    <!--inicio seccion-->
+
+    <section>
+        <aside id="izq"></aside>
+        <article>
+            <h1>Historia</h1>
+            <p><img src="img/Warframe.jpg" width="250">Fueron llamados tenno. Guerreros de espadas y 
+                armas de fuego; maestros de la armadura Warframe. Los que sobrevivieron a la Antigua 
+                Guerra quedaron a la deriva entre las ruinas. Ahora son necesitados una vez más.
+                Los grineer, con su vasto ejército, se están extendiendo por todo el Sistema Solar. 
+                Una llamada se hace eco a través de las estrellas, convocando a los tenno a un antiguo 
+                lugar. Te convocan.</p>
+                <br>
+                <p>
+                    Permite que Lotus te guíe. Ella te ha rescatado de tu cámara criogénica y te ha dado la oportunidad de sobrevivir. Los grineer te encontrarán; debes estar preparado. Lotus te enseñará las formas de los warframes y los secretos para revelar sus poderes.
+                    VEN TENNO, DEBES UNIRTE A LA GUERRA.</p>
+        </article>
+        <aside id="der"></aside>
+    </section>
+
+    <!--cierre seccion-->
+    <!--inicia pie de pagina-->
+
+    <footer>
+        &copy; Todos los derechos reservados.
+        <!--pagina mia y de nadie mas /copirigth-->
+    </footer>
+
+    <!--cierre pie de pagina-->
+
+</body>
+
+</html>

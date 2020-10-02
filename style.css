@@ -1,0 +1,290 @@
+* {
+    /*el asterisco es el selector universal*/
+    margin: 0;
+    /*los margenes se especifican con 4 valores
+    top right bottom left
+    arriba derecha abajo izquierda
+    siempre en sentido horario*/
+    padding: 0;
+    list-style: none;
+    /*esto es para borrar el estilo de lista por defecto*/
+    font-family: sans-serif;
+    /*como buena practica se recomienda mantener 
+    siempre una misma tipografia en toda la pagina, por lo gral si queremos
+     usar otra solo se hace en titulos, logos, botones o demas cosas especificas*/
+
+}
+#chat{
+    position: fixed;
+    width: 250px;
+    height: 40px;
+    
+    bottom: 0;
+    right: 20px;
+    background: #aaa;
+    z-index: 1;/*z-index sirve para indicar la posicion de una caja en cuanto a 
+    la profundidad
+    el valor 0 es el que viene por defecto por eso la caja de chat se mete abajo
+    de las otras cajas
+    para poner la caja chat adelante solo se pone 1 o 2 o 3 deacuerdo a lo 
+    que se necesite*/
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 20px; 
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;/*esta propiedad se utiliza para indicar al usuario que
+     es un boton*/
+}
+
+header {
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 120px;
+}
+
+#logo {
+    position: absolute;
+    /*la posicion absoluta nos permite ubicar una caja interna dentro de 
+    una caja principal */
+    top: 30px;
+    /*nunca puede estar el top y el bottom al mismo tiempo*/
+    left: 30px;
+    /*lo mismo pasa con el left y el right*/
+    width: 200px;
+    height: 66px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    /*esta propiedad alinea de manera vertical*/
+    line-height: 60px;
+    /*esta etiqueta sirve para ubicar el renglon por asi decirlo
+                        de donde va a estar el texto
+                        esta propiedad alinea de manera horizontal*/
+}
+
+.redes {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: #ccc;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 42px;
+    color: white;
+}
+
+#icono1 {
+    top: 42px;
+    right: 120px;
+    background: blue;
+}
+
+#icono2 {
+    top: 42px;
+    right: 71px;
+    background: blueviolet;
+}
+
+#icono3 {
+    top: 42px;
+    right: 19px;
+    background: brown;
+}
+
+
+nav {
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    height: 48px;
+}
+
+.botones {
+    float: left;
+    /*hace flotar el listado de vertical a horizontal y lo hace de izq a der*/
+    width: 196px;
+    margin: 0 2px;
+    height: 48px;
+    background: rgba(100, 0, 0, 255);
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+    border-radius: 10px;
+}
+a .botones:hover {/*hover es una seudo clase que hace que cuando pase el mouse el 
+boton cambie*/
+    background:rgba(100, 0, 150 );
+}
+a .botones:active{/*active sirve para que el boton haga algo cuando le doy click*/
+    background:rgba(100, 0, 200);
+}
+
+#top {
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 192px;
+}
+
+#top ul {
+    /*aca tengo que crear una caja o darle valores a la caja ul porque los li no 
+entran en la caja top*/
+    width: 1010px;
+    height: 192px;
+}
+
+#top ul li {
+    /*seleccion de clase por ruta*/
+    float: left;
+    width: 326px;
+    height: 192px;
+    margin-right: 10px;
+    /*con esto se corren las cajas con un margen de 10px hacia la derecha*/
+    text-align: center;
+}
+
+#top ul li img {
+    border-radius: 100%;
+    height: 100px;
+}
+
+#top ul li h1 {
+    font-family: 'Kaushan Script', cursive;
+}
+
+#top ul li p {
+    font-size: 14px;
+    margin: 10px;
+}
+
+section {
+    position: relative;
+    margin: auto;
+    width: 1000px;
+    height: 453px;
+}
+
+aside#izq {
+    /*otra dorma de llamar a una caja con css es llamar a la caja y pegado el id con numeral
+sin espacion*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 453px;
+}
+
+aside#izq ul li {
+    background: #aaa;
+    padding: 10px;
+    margin: 5px 10px;
+    list-style: square;
+    list-style-position: inside;
+    list-style-image: url(/img/link.png);
+    border-radius: 10px;
+}
+aside#izq ul li a{
+    text-decoration: none;/*text decoration sirve para borrarle el subrayado
+     a los link*/
+}
+
+aside#der {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 453px;
+}
+
+aside#der h1 {
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: rgba(100, 0, 0, 255);
+    color: white;
+    margin-bottom: 5px;
+    /*esto sirve para darge un margen inferior*/
+}
+
+aside#der input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 176px;
+}
+
+aside#der input[type="text"] {
+    background: url(/img/usuario.png);
+    margin-right: 2px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    border-radius: 10px;
+}
+
+aside#der input[type="password"] {
+    background: url(/img/contra.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    border-radius: 10px;
+}
+
+aside#der input[type="email"] {
+    background: url(/img/email.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    border-radius: 10px;
+}
+aside#der input[type="submit"] {
+    width: 200px;
+    background:rgba(100, 0, 0, 255);
+    border:0;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+article {
+    position: absolute;
+    left: 200px;
+    top: 0%;
+    width: 600px;
+    height: 453px;
+}
+
+article h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px;
+    margin: 20px;
+}
+
+article p img {
+    float: left;
+    margin-right: 20px;
+}
+
+article p {
+    margin: 5px 20px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+footer {
+    position: relative;
+    margin: 20px auto;
+    width: 1000px;
+    height: 70px;
+    background: #888;
+    text-align: center;
+    line-height: 70px;
+    color: white;
+    background: rgba(100, 0, 0, 255);
+}
